@@ -187,7 +187,7 @@ namespace BG_ServerManager
 
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.FileName = Variables.PathToServer;
-            startInfo.Arguments = "-console -game ship -port 27015 -steam " + Variables.ServerParams;
+            startInfo.Arguments = "-console -game ship -port 27016 -steam " + Variables.ServerParams;
             startInfo.UseShellExecute = false;
             startInfo.WindowStyle = ProcessWindowStyle.Maximized;
             startInfo.CreateNoWindow = false;
@@ -363,7 +363,7 @@ namespace BG_ServerManager
                     }
                     else
                     {
-                        await Log("Automatical restarts are set to: " + hoursUntilRestart + "hours");
+                        await Log("Automatic restarts are set to: " + hoursUntilRestart + "hours", txtColour: ConsoleColor.Green);
 
 
                         storeVariable("hoursUntilRestart", hoursUntilRestart.ToString());
